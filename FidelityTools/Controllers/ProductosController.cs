@@ -20,7 +20,8 @@ namespace FidelityTools.Controllers
 
         // GET: Productos
         public async Task<IActionResult> Index()
-        {
+        {  
+                                            
             return View(await _context.Productos.ToListAsync());
         }
 
@@ -53,7 +54,7 @@ namespace FidelityTools.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,nombre,stock,precio,idCat")] Productos productos)
+        public async Task<IActionResult> Create([Bind("id,nombre,stock,precio,idCategoria")] Productos productos)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +86,7 @@ namespace FidelityTools.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,nombre,stock,precio,idCat")] Productos productos)
+        public async Task<IActionResult> Edit(int id, [Bind("id,nombre,stock,precio,idCategoria")] Productos productos)
         {
             if (id != productos.id)
             {

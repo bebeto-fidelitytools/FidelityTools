@@ -15,12 +15,12 @@ namespace FidelityTools.Models
         public string nombre { get; set; }
 
         [Required]
-        public string stock { get; set; }
+        public int stock { get; set; }
         [Required] 
         public decimal precio { get; set; }
         [Required]
 
-        public int idCat { get; set; }
+        public int idCategoria { get; set; }
       
 
     }
